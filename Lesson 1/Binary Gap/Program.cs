@@ -17,6 +17,7 @@ namespace Binary_Gap
         {
             string binaryNumber = Convert.ToString(N, 2);
 
+
             int currentGap = 0;
 
             for (int i = 0; i < binaryNumber.Length; i++)
