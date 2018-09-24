@@ -6,18 +6,27 @@ namespace PermMissingElem
     {
         static void Main(string[] args)
         {
-
-            int[] A = new int[10] { 1, 4, 2, 3, 7, 9, 10, 6, 8, 0 };
+            int[] A = new int[4] { 2, 3, 1, 5 };
 
             int missingElement = Solution(A);
-
-            Console.WriteLine($"Missing Elmement {missingElement}");
+            Console.WriteLine($"Solution: {missingElement}");
         }
 
 
         static int Solution(int[] A)
         {
-            throw new NotImplementedException();
+            long n = A.Length + 1;
+            int a1 = 1;
+            long sum = 0;
+
+            foreach (int el in A)
+            {
+                sum += el;
+            }
+
+            long sumTotal = ((a1 + n) * n) / 2;
+
+            return (int)(sumTotal - sum);
         }
     }
 }
